@@ -11,8 +11,8 @@ body {
 	float: left;
 }
 #div_thumbnail{
-	margin-left: 100px;
-	width: 900px;
+/*	margin-left: 100px;*/
+	width: 1000px;
 }
 .thumbnail{
 	float: left;
@@ -26,6 +26,16 @@ body {
 }
 */
 #div_stat{
+	background-color: white;
+	margin: 3%;
+	width: 900px;
+	height: 650px;
+	border-style: ridge;
+	float: left;
+	position: absolute;
+	display: none;
+}
+#div_setting{
 	background-color: white;
 	margin: 3%;
 	width: 900px;

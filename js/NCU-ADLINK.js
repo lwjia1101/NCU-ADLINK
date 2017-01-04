@@ -85,3 +85,8 @@ function set_default(){
 		$("#topic").val("Topic: " + topic);
 	});
 }
+function show_setting(){
+	$("#plus").click(function(){
+			$("#div_setting").toggle();
+		});
+}
