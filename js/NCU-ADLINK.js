@@ -7,8 +7,16 @@ function show_stat(){
 	$(document).ready(function(){
 		$("#img").click(function(){
 		  	$("#div_stat").toggle();
-				});
-			});
+		});
+//		$("#X").click(function(){
+//			$("#div_stat").toggle();
+//		});
+	});
+}
+function X(id){
+	$(".X").click(function(){
+			$(id).hide();
+		});
 }
 function show_thumbnail(img_src){
 	$(document).ready(function(){
@@ -21,7 +29,7 @@ function show_thumbnail(img_src){
 function show_constrain(){
 	$(document).ready(function(){
 		$("#constrain").click(function(){
-			$("#constrain_setting").toggle();
+			$("#div_constrain_setting").toggle();
 		});
 	});
 }
@@ -88,5 +96,10 @@ function set_default(){
 function show_setting(){
 	$("#plus").click(function(){
 			$("#div_setting").toggle();
+		});
+}
+function show_set(arg){
+	$("#" + arg).click(function(){
+			$("#div_" + arg).toggle();
 		});
 }

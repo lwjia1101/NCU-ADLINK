@@ -16,14 +16,19 @@
 
 	<body >
 		<div id="div_img" >
+
 			<img id="img" src="Alllog-2016-10-13-0.png" width="1000" height="750" alt="">
 			<div id="div_stat" >
+			<img id="X" class="X" src="X.png"  alt="" >
+			<script type="text/javascript">
+				X("#div_stat");
+			</script>
 		   	    <input type="button" id="constrain" value="Constrain">
 		   	    <script type="text/javascript">
 					show_constrain();
 				</script>
         		
-         		<div id="constrain_setting">
+         		<div id="div_constrain_setting" >
 					<div id="div_time_setting">
 						<input class="setting" id="time_1000" type="button" value="1000">
 						<input class="setting" id="time_2000" type="button" value="2000">
@@ -78,33 +83,121 @@
 		   	    <input type="button" id="information" value="Information">
             </div>
             <div id="div_setting">
-            	<input type="button" id="setting" value="Setting">
+            	<header class="setting_head">Setting<img class="X" src="X.png"  alt="" ></header>
+            	<script type="text/javascript">
+					X("#div_setting");
+//					X("#div_minTopic");
+//					X("#div_maxTopic");
+//					X("#div_size");
+//					X("#div_steps");
+//					X("#div_msgNum");
+//					X("#div_device");
+//					X("#div_repeat");
+				</script>
             	<input class="setting" id="minTopic" type="button" value="MinTopic">
             	<input class="setting" id="maxTopic" type="button" value="MaxTopic">
             	<input class="setting" id="size" type="button" value="Size">
             	<input class="setting" id="steps" type="button" value="steps">
-            	<input class="setting" id="magNum" type="button" value="Message Number">
+            	<input class="setting" id="msgNum" type="button" value="Message Number">
             	<input class="setting" id="device" type="button" value="Device">
             	<input class="setting" id="repeat" type="button" value="Repeat">
             	<input class="setting" id="start" type="button" value="Start">
             	<script type="text/javascript">
-					
-					
+					show_set("minTopic");
+					show_set("maxTopic");
+					show_set("size");
+					show_set("steps");
+					show_set("msgNum");
+					show_set("device");
+					show_set("repeat");
 				</script>
 			</div>
 			<div id="div_minTopic" class="new">
+				<header class="setting_head">MinTopic<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+					X("#div_minTopic");
+				</script>
+				<input class="setting" id="minTopic_1" type="button" value="1">
+				<input class="setting" id="minTopic_4" type="button" value="4">
+				<input class="setting" id="minTopic_8" type="button" value="8">
+				<input class="setting" id="minTopic_12" type="button" value="12">
+				<input class="setting" id="minTopic_16" type="button" value="16">
+				<input class="setting" id="minTopic_20" type="button" value="20">
+				<input class="setting" id="minTopic_24" type="button" value="24">
+				
 			</div>
 			<div id="div_maxTopic" class="new">
+				<header class="setting_head">MaxTopic<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+					X("#div_maxTopic");
+				</script>
+				<input class="setting" id="maxTopic_200" type="button" value="200">
+				<input class="setting" id="maxTopic_300" type="button" value="300">
+				<input class="setting" id="maxTopic_400" type="button" value="400">
+				<input class="setting" id="maxTopic_500" type="button" value="500">
+				<input class="setting" id="maxTopic_600" type="button" value="600">
+				<input class="setting" id="maxTopic_800" type="button" value="800">
+				<input class="setting" id="maxTopic_1000" type="button" value="1000">
 			</div>
 			<div id="div_size" class="new">
+				<header class="setting_head">Size<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+					X("#div_size");
+				</script>
+				<input class="setting" id="size_1" type="button" value="1K">
+				<input class="setting" id="size_2" type="button" value="10K">
+				<input class="setting" id="size_3" type="button" value="100K">
+				<input class="setting" id="size_4" type="button" value="1M">
 			</div>
 			<div id="div_steps" class="new">
+				<header class="setting_head">Steps<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+					X("#div_steps");
+				</script>
+				<input class="setting" id="steps_1" type="button" value="1">
+				<input class="setting" id="steps_4" type="button" value="4">
+				<input class="setting" id="steps_10" type="button" value="20">
+				<input class="setting" id="steps_20" type="button" value="20">
+				<input class="setting" id="steps_50" type="button" value="50">
+				<input class="setting" id="steps_100" type="button" value="100">
+				<input class="setting" id="steps_200" type="button" value="200">
 			</div>
 			<div id="div_msgNum" class="new">
+				<header class="setting_head">Massage Number<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+					X("#div_msgNum");
+				</script>
+				<input class="setting" id="msgNum_1" type="button" value="1">
+				<input class="setting" id="msgNum_10" type="button" value="10">
+				<input class="setting" id="msgNum_100" type="button" value="100">
+				<input class="setting" id="msgNum_200" type="button" value="200">
+				<input class="setting" id="msgNum_400" type="button" value="400">
+				<input class="setting" id="msgNum_800" type="button" value="800">
+				<input class="setting" id="msgNum_1000" type="button" value="1000">
 			</div>
 			<div id="div_device" class="new">
+				<header class="setting_head">Device<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+						X("#div_device");
+				</script>
+				<input class="setting" id="device_1" type="button" value="1">
+				<input class="setting" id="device_2" type="button" value="2">
+				<input class="setting" id="device_3" type="button" value="3">
+				<input class="setting" id="device_4" type="button" value="4">
+				
 			</div>
 			<div id="div_repeat" class="new">
+				<header class="setting_head">Repeat<img class="X" src="X.png"  alt="" ></header>
+				<script type="text/javascript">
+						X("#div_repeat");
+				</script>
+				<input class="setting" id="repeat_1" type="button" value="1">
+				<input class="setting" id="repeat_2" type="button" value="2">
+				<input class="setting" id="repeat_3" type="button" value="3">
+				<input class="setting" id="repeat_4" type="button" value="4">
+				<input class="setting" id="repeat_5" type="button" value="5">
+				<input class="setting" id="repeat_6" type="button" value="6">
+				<input class="setting" id="repeat_7" type="button" value="7">
 			</div>
 			
 		</div>
