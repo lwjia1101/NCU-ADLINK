@@ -17,14 +17,6 @@ body {
 .thumbnail{
 	float: left;
 }
-/*
-#thumbnail1{
-	float: left;
-}
-#thumbnail2{
-	float: left;
-}
-*/
 .setting_head{
 	background-color:darkturquoise;
 	width: 100%;
@@ -109,17 +101,6 @@ body {
 	position: absolute;
 	display: none;
 }
-/*
-#topic{
-	background-color: aquamarine;
-	margin-top: 2%;
-	margin-right: 5%;
-	width: 40%;
-	height: 20%;
-	font-size: 200%;
-	float: right;
-}
-*/
 #img{
 	float: left;
 }
@@ -144,7 +125,6 @@ body {
 	border-top-width: 2px;
 	border-bottom-style: ridge;
 	border-bottom-width: 2px;
-	
 	text-align: center;
 }
 .new{

@@ -52,7 +52,7 @@ function change_time_color(button){
 		time = $(button).val();
 	});
 }
-function change_topic_color(button){
+function change_color(button){
 	$(button).click(function(){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
@@ -78,6 +78,19 @@ function change_topic_val(){
 		if(temp != 0){
 			topic = $("#topic_other").val();
 			$("#topic").val("Topic: " + topic);
+		}else{
+			$("#topic").val("Topic: " + topic);
+		}
+		$("#topic_other").val(0);
+		temp = 0;
+	});
+}
+function change_val(arg){
+	$(arg + "_ok").click(function(){
+		var temp = $(arg + "_other").val();
+		if(temp != 0){
+			topic = $(arg[0].substring(0,1).toUpperCase + "_other").val();
+			$("#topic").val(arg + ": " + topic);
 		}else{
 			$("#topic").val("Topic: " + topic);
 		}
