@@ -139,11 +139,13 @@
 				<input class="setting" id="maxTopic_ok" type="button" value="OK">
 				<script type="text/javascript">
 					X("#div_maxTopic");
+					var val;
 					for(i = 200;i<=1000;i+=100){
 						change_color("#maxTopic_"+i);
+//						alert(change_color("#maxTopic_"+i));
 					}
 					show("#maxTopic_ok","#div_maxTopic");
-					change_val_handle("#maxTopic");
+					change_val_handle("#maxTopic",val);
 				</script>
 			</div>
 			<div id="div_size" class="new">

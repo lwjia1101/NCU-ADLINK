@@ -70,7 +70,37 @@ function change_color(button){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
 		var val = $(button).val();
-		return val;
+		alert(val);
+		var name = button.split("_");
+		switch(name[0]){
+			case "#minTopic":
+				minTopic = val;
+//				alert(minTopic);
+				break;
+			case "#maxTopic":
+				this.maxTopic = val;
+//				alert(maxTopic);
+//				alert(this.maxTopic);
+//				maxTopic = change_val(arg,this.maxTopic);
+				break;
+			case "#size":
+				size = change_val(arg,size);
+				break;
+			case "#steps":
+				steps = change_val(arg,steps);
+				break;
+			case "#msgNum":
+				msgNum = change_val(arg,msgNum);
+				break;
+			case "#device":
+				device = change_val(arg,device);
+				break;
+			case "#repeat":
+				repeats= change_val(arg,repeats);
+				break;
+		}
+	//		alert(val);
+		
 	});
 }
 function change_time_val(){
@@ -103,7 +133,7 @@ function change_minTopic_val(){
 	$("#minTopic_ok").click(function(){
 		var temp = $("#minTopic_other").val();
 		if(temp != 0){
-			topic = $("#minTopic_other").val();
+			minTopic = $("#minTopic_other").val();
 			$("#minTopic").val("minTopic: " + minTopic);
 		}else{
 			$("#minTopic").val("minTopic: " + minTopic);
@@ -112,13 +142,15 @@ function change_minTopic_val(){
 		temp = 0;
 	});
 }
-function change_val_handle(arg){
+function change_val_handle(arg,num){
 	switch(arg){
 		case "#minTopic":
-//			minTopic = change_color(arg)
 			minTopic = change_val(arg,minTopic);
 			break;
 		case "#maxTopic":
+//			maxTopic = num;
+//			var maxTopic = num;
+//			alert(num);
 			maxTopic = change_val(arg,maxTopic);
 			break;
 		case "#size":
