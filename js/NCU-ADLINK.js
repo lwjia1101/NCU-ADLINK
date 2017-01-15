@@ -3,6 +3,13 @@
 //click the image and show the setting page
 var time = 1000;
 var topic = 1;
+var minTopic = 1;
+var maxTopic = 200;
+var size = 0;
+var steps = 1;
+var msgNum = 100;
+var device = 1;
+var repeats = 1;
 function show_stat(){
 	$(document).ready(function(){
 		$("#img").click(function(){
@@ -25,6 +32,12 @@ function show_thumbnail(img_src){
 			//$("#img1").attr("src","../../Desktop/backup/Django-2016-10-18/www/ncu/media/Alllog-2016-10-12-0.png")
 		});
 	});
+}
+function show(id1,id2){
+	$(id1).click(function(){
+			$(id2).toggle();
+		});
+	
 }
 function show_constrain(){
 	$(document).ready(function(){
@@ -56,7 +69,8 @@ function change_color(button){
 	$(button).click(function(){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
-		topic = $(button).val();
+		var val = $(button).val();
+		return val;
 	});
 }
 function change_time_val(){
@@ -85,17 +99,57 @@ function change_topic_val(){
 		temp = 0;
 	});
 }
-function change_val(arg){
+function change_minTopic_val(){
+	$("#minTopic_ok").click(function(){
+		var temp = $("#minTopic_other").val();
+		if(temp != 0){
+			topic = $("#minTopic_other").val();
+			$("#minTopic").val("minTopic: " + minTopic);
+		}else{
+			$("#minTopic").val("minTopic: " + minTopic);
+		}
+		$("#minTopic_other").val(0);
+		temp = 0;
+	});
+}
+function change_val_handle(arg){
+	switch(arg){
+		case "#minTopic":
+//			minTopic = change_color(arg)
+			minTopic = change_val(arg,minTopic);
+			break;
+		case "#maxTopic":
+			maxTopic = change_val(arg,maxTopic);
+			break;
+		case "#size":
+			size = change_val(arg,size);
+			break;
+		case "#steps":
+			steps = change_val(arg,steps);
+			break;
+		case "#msgNum":
+			msgNum = change_val(arg,msgNum);
+			break;
+		case "#device":
+			device = change_val(arg,device);
+			break;
+		case "#repeat":
+			repeats= change_val(arg,repeats);
+			break;
+	}
+}
+function change_val(arg,val){
 	$(arg + "_ok").click(function(){
 		var temp = $(arg + "_other").val();
 		if(temp != 0){
-			topic = $(arg[0].substring(0,1).toUpperCase + "_other").val();
-			$("#topic").val(arg + ": " + topic);
+			val = $(arg + "_other").val();
+			$(arg).val(arg[1].substring(0).toUpperCase() + arg.substring(2) + ": " + val);
 		}else{
-			$("#topic").val("Topic: " + topic);
+			$(arg).val(arg[1].substring(0).toUpperCase() + arg.substring(2) + ": " + val);
 		}
-		$("#topic_other").val(0);
+		$(arg + "_other").val(0);
 		temp = 0;
+		return val;
 	});
 }
 function set_default(){

@@ -59,6 +59,7 @@
 							}
 							show_topic_setting("#topic_ok");
 							change_topic_val();
+							
 						</script>
 					</div>
          			<input class="setting" id="time" type="button" value="Time">
@@ -110,19 +111,23 @@
 				<input class="setting" id="minTopic_16" type="button" value="16">
 				<input class="setting" id="minTopic_20" type="button" value="20">
 				<input class="setting" id="minTopic_24" type="button" value="24">
+				<input class="setting" id="minTopic_other" type="number" value="0">
+				<input class="setting" id="minTopic_ok" type="button" value="OK">
 				<script type="text/javascript">
 					X("#div_minTopic");
 					change_color("#minTopic_"+1);
 					for(i = 4;i<=24;i = i + 4){
 						change_color("#minTopic_"+i);
 					}
+//					change_minTopic_val();
+					show("#minTopic_ok","#div_minTopic");
+//					change_val("#minTopic");
+					change_val_handle("#minTopic");
 				</script>
 			</div>
 			<div id="div_maxTopic" class="new">
 				<header class="setting_head">MaxTopic<img class="X" src="X.png"  alt="" ></header>
-				<script type="text/javascript">
-					X("#div_maxTopic");
-				</script>
+				
 				<input class="setting" id="maxTopic_200" type="button" value="200">
 				<input class="setting" id="maxTopic_300" type="button" value="300">
 				<input class="setting" id="maxTopic_400" type="button" value="400">
@@ -130,28 +135,38 @@
 				<input class="setting" id="maxTopic_600" type="button" value="600">
 				<input class="setting" id="maxTopic_800" type="button" value="800">
 				<input class="setting" id="maxTopic_1000" type="button" value="1000">
-			</div>
-			<div id="div_size" class="new">
-				<header class="setting_head">Size<img class="X" src="X.png"  alt="" ></header>
+				<input class="setting" id="maxTopic_other" type="number" value="0">
+				<input class="setting" id="maxTopic_ok" type="button" value="OK">
 				<script type="text/javascript">
-					X("#div_size");
+					X("#div_maxTopic");
 					for(i = 200;i<=1000;i+=100){
 						change_color("#maxTopic_"+i);
 					}
+					show("#maxTopic_ok","#div_maxTopic");
+					change_val_handle("#maxTopic");
 				</script>
+			</div>
+			<div id="div_size" class="new">
+				<header class="setting_head">Size<img class="X" src="X.png"  alt="" ></header>
+				
 				<input class="setting" id="size_1" type="button" value="1K">
 				<input class="setting" id="size_2" type="button" value="10K">
 				<input class="setting" id="size_3" type="button" value="100K">
 				<input class="setting" id="size_4" type="button" value="1M">
+				<input class="setting" id="size_other" type="number" value="0">
+				<input class="setting" id="size_ok" type="button" value="OK">
+				<script type="text/javascript">
+					X("#div_size");
+					for(i = 0;i<=4;i++){
+						change_color("#size_"+i);
+					}
+					show("#size_ok","#div_size");
+					change_val_handle("#size");
+				</script>
 			</div>
 			<div id="div_steps" class="new">
 				<header class="setting_head">Steps<img class="X" src="X.png"  alt="" ></header>
-				<script type="text/javascript">
-					X("#div_steps");
-					for(i = 1;i<=4;i++){
-						change_color("#size_"+i);
-					}
-				</script>
+				
 				<input class="setting" id="steps_1" type="button" value="1">
 				<input class="setting" id="steps_4" type="button" value="4">
 				<input class="setting" id="steps_10" type="button" value="20">
@@ -159,15 +174,20 @@
 				<input class="setting" id="steps_50" type="button" value="50">
 				<input class="setting" id="steps_100" type="button" value="100">
 				<input class="setting" id="steps_200" type="button" value="200">
-			</div>
-			<div id="div_msgNum" class="new">
-				<header class="setting_head">Massage Number<img class="X" src="X.png"  alt="" ></header>
+				<input class="setting" id="steps_other" type="number" value="0">
+				<input class="setting" id="steps_ok" type="button" value="OK">
 				<script type="text/javascript">
-					X("#div_msgNum");
+					X("#div_steps");
 					for(i = 1;i<=200;i++){
 						change_color("#steps_"+i);
 					}
+					show("#steps_ok","#div_steps");
+					change_val_handle("#steps");
 				</script>
+			</div>
+			<div id="div_msgNum" class="new">
+				<header class="setting_head">Massage Number<img class="X" src="X.png"  alt="" ></header>
+				
 				<input class="setting" id="msgNum_1" type="button" value="1">
 				<input class="setting" id="msgNum_10" type="button" value="10">
 				<input class="setting" id="msgNum_100" type="button" value="100">
@@ -175,6 +195,16 @@
 				<input class="setting" id="msgNum_400" type="button" value="400">
 				<input class="setting" id="msgNum_800" type="button" value="800">
 				<input class="setting" id="msgNum_1000" type="button" value="1000">
+				<input class="setting" id="msgNum_other" type="number" value="0">
+				<input class="setting" id="msgNum_ok" type="button" value="OK">
+				<script type="text/javascript">
+					X("#div_msgNum");
+					for(i = 1;i<=1000;i++){
+						change_color("#msgNum_"+i);
+					}
+					show("#msgNum_ok","#div_msgNum");
+					change_val_handle("#msgNum");
+				</script>
 			</div>
 			<div id="div_device" class="new">
 				<header class="setting_head">Device<img class="X" src="X.png"  alt="" ></header>
@@ -183,11 +213,15 @@
 				<input class="setting" id="device_2" type="button" value="2">
 				<input class="setting" id="device_3" type="button" value="3">
 				<input class="setting" id="device_4" type="button" value="4">
+				<input class="setting" id="device_other" type="number" value="0">
+				<input class="setting" id="device_ok" type="button" value="OK">
 				<script type="text/javascript">
 					X("#div_device");
 					for(i = 1;i<=1000;i++){
 						change_color("#device_"+i);
 					}
+					show("#device_ok","#div_device");
+					change_val_handle("#device");
 				</script>
 			</div>
 			<div id="div_repeat" class="new">
@@ -199,11 +233,15 @@
 				<input class="setting" id="repeat_5" type="button" value="5">
 				<input class="setting" id="repeat_6" type="button" value="6">
 				<input class="setting" id="repeat_7" type="button" value="7">
+				<input class="setting" id="repeat_other" type="number" value="0">
+				<input class="setting" id="repeat_ok" type="button" value="OK">
 				<script type="text/javascript">
 					X("#div_repeat");
 					for(i = 1;i<=7;i = i + 1){
 						change_color("#repeat_"+i);
 					}
+					show("#repeat_ok","#div_repeat");
+					change_val_handle("#repeat");
 				</script>
 			</div>
 		</div>
