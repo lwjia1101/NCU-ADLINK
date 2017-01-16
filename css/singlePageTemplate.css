@@ -34,6 +34,7 @@ body {
 	margin: 3%;
 	width: 900px;
 	height: 650px;
+	box-shadow: 10px 10px 5px #888888;
 	border-style: ridge;
 	float: left;
 	position: absolute;
@@ -50,6 +51,7 @@ body {
 	margin: 3%;
 	width: 900px;
 	height: 650px;
+	box-shadow: 10px 10px 5px #888888;
 	border-style: ridge;
 	float: left;
 	position: absolute;
@@ -60,6 +62,7 @@ body {
 	width: 100%;
 	height: 50px;
 	font-size: 250%;
+/*	box-shadow:inset 10px 10px 5px #ffffff;*/
 	border-top-style: ridge;
 	border-top-width: 2px;
 	border-bottom-style: ridge;
@@ -69,6 +72,7 @@ body {
 }
 #div_constrain_setting{
 	height: 300px;
+/*	box-shadow:inset 10px 10px 5px #888888;*/
 	display: none;
 }
 .setting{
@@ -109,6 +113,7 @@ body {
 	width: 100%;
 	height: 50px;
 	font-size: 250%;
+	box-shadow:inset 0px 0px 80px #ffffff;
 	border-top-style: ridge;
 	border-top-width: 2px;
 	border-bottom-style: ridge;
@@ -121,6 +126,7 @@ body {
 	width: 100%;
 	height: 50px;
 	font-size: 250%;
+	box-shadow:inset 0px 0px 80px #ffffff;
 	border-top-style: ridge;
 	border-top-width: 2px;
 	border-bottom-style: ridge;
@@ -132,6 +138,7 @@ body {
 	margin: 3%;
 	width: 900px;
 	height: 650px;
+/*	box-shadow:inset 0px 0px 80px #ffffff;*/
 	border-style: ridge;
 	float: left;
 	position: absolute;

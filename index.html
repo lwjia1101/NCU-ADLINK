@@ -55,7 +55,7 @@
         				<input class="setting" id="topic_ok" type="button" value="OK">
         				<script type="text/javascript">
 							for(i=100;i<=600;i+=100){
-								change_color("#topic_"+i);
+								change_topic_color("#topic_"+i);
 							}
 							show_topic_setting("#topic_ok");
 							change_topic_val();
@@ -121,7 +121,6 @@
 					}
 //					change_minTopic_val();
 					show("#minTopic_ok","#div_minTopic");
-//					change_val("#minTopic");
 					change_val_handle("#minTopic");
 				</script>
 			</div>
@@ -145,7 +144,7 @@
 //						alert(change_color("#maxTopic_"+i));
 					}
 					show("#maxTopic_ok","#div_maxTopic");
-					change_val_handle("#maxTopic",val);
+					change_val_handle("#maxTopic");
 				</script>
 			</div>
 			<div id="div_size" class="new">

@@ -62,45 +62,15 @@ function change_time_color(button){
 	$(button).click(function(){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
+		alert("123"+time);
 		time = $(button).val();
 	});
 }
-function change_color(button){
+function change_topic_color(button){
 	$(button).click(function(){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
-		var val = $(button).val();
-		alert(val);
-		var name = button.split("_");
-		switch(name[0]){
-			case "#minTopic":
-				minTopic = val;
-//				alert(minTopic);
-				break;
-			case "#maxTopic":
-				this.maxTopic = val;
-//				alert(maxTopic);
-//				alert(this.maxTopic);
-//				maxTopic = change_val(arg,this.maxTopic);
-				break;
-			case "#size":
-				size = change_val(arg,size);
-				break;
-			case "#steps":
-				steps = change_val(arg,steps);
-				break;
-			case "#msgNum":
-				msgNum = change_val(arg,msgNum);
-				break;
-			case "#device":
-				device = change_val(arg,device);
-				break;
-			case "#repeat":
-				repeats= change_val(arg,repeats);
-				break;
-		}
-	//		alert(val);
-		
+		topic = $(button).val();
 	});
 }
 function change_time_val(){
@@ -129,29 +99,74 @@ function change_topic_val(){
 		temp = 0;
 	});
 }
-function change_minTopic_val(){
-	$("#minTopic_ok").click(function(){
-		var temp = $("#minTopic_other").val();
-		if(temp != 0){
-			minTopic = $("#minTopic_other").val();
-			$("#minTopic").val("minTopic: " + minTopic);
-		}else{
-			$("#minTopic").val("minTopic: " + minTopic);
+
+function change_color(button){
+	$(button).click(function(){
+		$(".setting").css("background-color","aquamarine");
+		$(button).css("background-color","red");
+		alert("set"+maxTopic);
+		
+		var name = button.split("_");
+		switch(name[0]){
+			case "#minTopic":
+				minTopic = $(button).val();
+//				alert("mintopic"+minTopic);
+//				alert(this.minTopic);
+//				change_val(name[0],minTopic);
+				break;
+			case "#maxTopic":
+//				alert(maxTopic);
+				maxTopic = $(button).val();
+//				alert("maxtopic " + maxTopic);
+//				alert(this.maxTopic);
+//				change_val(name[0],maxTopic);
+				break;
+			case "#size":
+//				size = change_val(arg,size);
+				break;
+			case "#steps":
+//				steps = change_val(arg,steps);
+				break;
+			case "#msgNum":
+//				msgNum = change_val(arg,msgNum);
+				break;
+			case "#device":
+//				device = change_val(arg,device);
+				break;
+			case "#repeat":
+//				repeats= change_val(arg,repeats);
+				break;
 		}
-		$("#minTopic_other").val(0);
-		temp = 0;
+	//		alert(val);
+		
 	});
 }
-function change_val_handle(arg,num){
+//function change_minTopic_val(){
+//	$("#minTopic_ok").click(function(){
+//		var temp = $("#minTopic_other").val();
+//		if(temp != 0){
+//			minTopic = $("#minTopic_other").val();
+//			$("#minTopic").val("minTopic: " + minTopic);
+//		}else{
+//			$("#minTopic").val("minTopic: " + minTopic);
+//		}
+//		$("#minTopic_other").val(0);
+//		temp = 0;
+//	});
+//}
+function change_val_handle(arg){
 	switch(arg){
 		case "#minTopic":
 			minTopic = change_val(arg,minTopic);
+//			alert(minTopic);
 			break;
 		case "#maxTopic":
 //			maxTopic = num;
 //			var maxTopic = num;
-//			alert(num);
+//			alert("max"+maxTopic);
+			
 			maxTopic = change_val(arg,maxTopic);
+//			alert(this.maxTopic);
 			break;
 		case "#size":
 			size = change_val(arg,size);
@@ -173,10 +188,12 @@ function change_val_handle(arg,num){
 function change_val(arg,val){
 	$(arg + "_ok").click(function(){
 		var temp = $(arg + "_other").val();
+//		alert(val);
 		if(temp != 0){
 			val = $(arg + "_other").val();
 			$(arg).val(arg[1].substring(0).toUpperCase() + arg.substring(2) + ": " + val);
 		}else{
+//			alert(val);
 			$(arg).val(arg[1].substring(0).toUpperCase() + arg.substring(2) + ": " + val);
 		}
 		$(arg + "_other").val(0);
