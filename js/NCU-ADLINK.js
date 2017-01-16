@@ -62,7 +62,7 @@ function change_time_color(button){
 	$(button).click(function(){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
-		alert("123"+time);
+//		alert("123"+time);
 		time = $(button).val();
 	});
 }
@@ -104,7 +104,7 @@ function change_color(button){
 	$(button).click(function(){
 		$(".setting").css("background-color","aquamarine");
 		$(button).css("background-color","red");
-		alert("set"+maxTopic);
+//		alert("set"+maxTopic);
 		
 		var name = button.split("_");
 		switch(name[0]){
